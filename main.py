@@ -40,6 +40,7 @@ def main():
     while True:
         match_urls = get_links_with_match_report(driver1)
         for url in match_urls:
+            driver2.get('chrome://newtab')
             var = get_matchCentreData(driver2,
                                       url.replace('MatchReport', 'Live'))
             Id = url.split('/')[4]
